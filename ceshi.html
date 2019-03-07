@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+<style>
+.header-one{
+	width: 100%;
+	height: 30px;
+	background: red;
+}
+.header-two{
+	width: 100%;
+	height: 50px;
+	background: yellow;
+}
+.headerNav{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.header-cont{
+	width: 100%;
+	height: 500px;
+	background: 
+	hotpink;
+}
+.header-three{
+	width: 100%;
+	height: 50px;
+	background: blue;
+}
+.headerStyle{
+	position: fixed;
+	top: 50px;
+	left: 0;
+}
+</style>
+</head>
+<body>
+	<div class="header-one"></div>
+	<div class="header-two"></div>
+	<div class="header-cont">测试
+			此处绿色的div块就代表上面所说的菜单，实现方式就是初始化布局使用绝对定位，这样top、left属性就设置了，并且要保证position: fixed;的时候top、left依然适用，给全局对象window绑定事件scroll、touchmove，之所以也需要touchmove事件是为了让运行起来更加流畅，不会有突兀变化的感觉。
+
+			上面的在安卓下面测试相当棒，但是在苹果下面总是在移动结束之后会有一个明显的变化，看起来很不舒服，可以扫面下面二维码的进行查看：
+			--------------------- 
+			作者：樊小书生 
+			来源：CSDN 
+
+	</div>
+	<div class="header-three"></div>
+	<div class="header-cont">此处绿色的div块就代表上面所说的菜单，实现方式就是初始化布局使用绝对定位，这样top、left属性就设置了，并且要保证position: fixed;的时候top、left依然适用，给全局对象window绑定事件scroll、touchmove，之所以也需要touchmove事件是为了让运行起来更加流畅，不会有突兀变化的感觉。
+
+			上面的在安卓下面测试相当棒，但是在苹果下面总是在移动结束之后会有一个明显的变化，看起来很不舒服，可以扫面下面二维码的进行查看：
+			--------------------- 
+			作者：樊小书生 
+			来源：CSDN 
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jQuery-1.8.3.min.js"></script>
+<script>
+$(function() {
+    $(window).scroll(function() {
+        if($(document).scrollTop() >= 30 || $(document).scrollTop() >= 530) {
+			$(".header-two").addClass("headerNav").slideDown();
+			$(".header-three").addClass("headerStyle").slideDown();
+        } else {
+            $(".header-two").removeClass("headerNav").show();
+			$(".header-three").removeClass("headerStyle").show();
+        }
+    })
+})
+
+
+
+
+</script>

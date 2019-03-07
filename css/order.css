@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document*/
+ body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,p,input,select,textarea,td{
+	margin:0;
+	padding:0;
+    }
+body,html{
+    height: 100%;
+}
+body{
+    font-family:"微软雅黑"，Arial;
+    background: #f7f7f7;
+}
+html{
+    font-size: 100px;
+}
+ul,ol{
+	list-style:none;
+}
+img{
+	border:0;
+}
+a{
+    text-decoration:none;
+}
+
+/* order */
+.order{
+    width: 100%;
+    background: white;
+    margin-top: .1rem;
+}
+.shop-info{
+    display: flex;
+}
+.shop-info img{
+    display: block;
+    width: .3rem;
+    height: .31rem;
+    margin: .25rem .1rem .61rem .15rem;
+}
+.shop-name{
+    height: .61rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+.shop-content{
+    display: flex;
+}
+.shop-content a{
+  
+}
+.shop-content a span{
+    font-size: .15rem;
+    color: black;
+    display: block;
+    width: 1.44rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.shop-content a img{
+    display: block;
+    width: .08rem;
+    height: .11rem;
+}
+.shop-content p{
+    font-size: 10px;
+    color: #dfdfdf;
+}
+.cancle{
+    font-size: 12px;
+    margin-left: .83rem;
+    margin-top: .2rem;
+}
+
